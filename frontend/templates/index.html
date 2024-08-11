@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Project Management Application</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <script src="../static/js/app.js" defer></script> <!-- Adjusted JS path -->
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('auth.login') }}">Login</a>
+            <a href="{{ url_for('auth.register') }}">Register</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome to the Project Management Application</h1>
+        <p>Organize your tasks and projects effectively with our tool.</p>
+        <section>
+            <h2>Features</h2>
+            <ul>
+                <li>Task creation and assignment</li>
+                <li>Due dates and priority levels</li>
+                <li>Progress tracking</li>
+                <li>Notifications for task updates</li>
+            </ul>
+        </section>
+        <section>
+            <h2>How It Works</h2>
+            <p>As an admin, you can create and assign projects to users, and track their progress. Users can view their tasks, accept them, and update their status to "In Progress" or "Completed."</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Project Management Application</p>
+    </footer>
+</body>
+</html>

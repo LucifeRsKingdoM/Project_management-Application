@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assign Task</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Assign Task</h1>
+    </header>
+    <main>
+        <form action="/auth/admin/assign_task" method="post">
+            <label for="task_id">Select Task:</label>
+            <select id="task_id" name="task_id" required>
+                {% for task in tasks %}
+                <option value="{{ task.id }}">{{ task.name }} - {{ task.project_name }}</option>
+                {% endfor %}
+            </select>
+        
+            <label for="user_id">Select User:</label>
+            <select id="user_id" name="user_id" required>
+                {% for user in users %}
+                <option value="{{ user.id }}">{{ user.name }}</option>
+                {% endfor %}
+            </select>
+        
+            <button type="submit">Assign Task</button>
+        </form>
+        
+    </main>
+</body>
+</html>
